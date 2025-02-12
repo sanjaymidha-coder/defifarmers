@@ -42,7 +42,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="bg-[#4CA146] h-screen">
+    <div className="bg-[#4CA146] min-h-screen">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 text-white lg:max-w-7xl lg:px-8">
         <div className="flex items-center gap-20">
           <div className="w-3/5 bracecontainer" ref={bracecontainer}>
