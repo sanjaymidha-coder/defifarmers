@@ -21870,7 +21870,7 @@ const FarmerFields = () => {
   </svg>
 
       <div
-        className="tractor max-w-[422px] absolute bottom-0 right-0 container"
+        className="tractor lg:max-w-[422px] max-w-[222px] absolute bottom-0 right-0 container"
         ref={container}
       >
         <Tractor />

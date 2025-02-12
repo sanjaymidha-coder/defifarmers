@@ -21,17 +21,17 @@ export default function Hero() {
         duration: 4,
         text: " Sustainability Clubs with DeFi Farmers",
       });
-      tl.fromTo( "p", { y: -20, opacity:0 }, { y: 0, opacity:1, duration: 1 });
-      tl.fromTo( "a",{ y: -20, opacity:0}, { y: 0, opacity:1});
+      tl.fromTo("p", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 1 });
+      tl.fromTo("a", { y: -20, opacity: 0 }, { y: 0, opacity: 1 });
       gsap.fromTo(
         ".brace",
         { x: "20", opacity: 0 },
-        { x: "0", ease: "none", duration: 0.2, opacity: 1, delay:1 }
+        { x: "0", ease: "none", duration: 0.2, opacity: 1, delay: 1 }
       );
       gsap.fromTo(
         ".brace-right",
         { x: "-20", opacity: 0 },
-        { x: "0", ease: "none", duration: 0.2, opacity: 1, delay:1 }
+        { x: "0", ease: "none", duration: 0.2, opacity: 1, delay: 1 }
       );
       gsap.fromTo(
         "p",
@@ -42,15 +42,15 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="bg-[#4CA146] min-h-screen">
+    <div className="bg-[#4CA146] min-h-screen overflow-hidden">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 text-white lg:max-w-7xl lg:px-8">
-        <div className="flex items-center gap-20">
-          <div className="w-3/5 bracecontainer" ref={bracecontainer}>
-            <h1 className="text-4xl font-bold leading-16 text-white sm:text-5xl title relative">
+        <div className="flex-wrap lg:flex-nowrap flex items-center text-center md:text-left gap-20">
+          <div className="w-full lg:w-3/5 bracecontainer" ref={bracecontainer}>
+            <h1 className="text-4xl font-bold sm:leading-16 leading-12 text-white sm:text-5xl title relative">
               <span>Building</span>
             </h1>
 
-            <div className="relative px-[2.5rem]">
+            <div className="relative px-[4rem] md:px-[2.5rem]">
               <img
                 className="brace absolute top-0 left-0 h-full"
                 src={brace}
@@ -76,8 +76,10 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="w-2/5">
+          <div className="w-full lg:w-2/5">
+            <div className="max-w-[350px] mx-auto">
             <Farmer />
+            </div>
           </div>
         </div>
       </div>
