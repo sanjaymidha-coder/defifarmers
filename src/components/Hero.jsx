@@ -13,14 +13,16 @@ gsap.registerPlugin(useGSAP, TextPlugin);
 
 export default function Hero() {
   const bracecontainer = useRef(null);
-  const tl = gsap.timeline({ repeat: 0, });
+  const tl = gsap.timeline({ repeat: 0, ease: "slow(0.7,0.7,false)" });
 
   useGSAP(() => {
     if (bracecontainer.current) {
-      tl.to("h1 span", {
+      gsap.to("h1 span", {
         duration: 4,
         text: " Sustainability Clubs with DeFi Farmers",
       });
+      tl.fromTo( "p", { y: -20, opacity:0 }, { y: 0, opacity:1, duration: 1 });
+      tl.fromTo( "a",{ y: -20, opacity:0}, { y: 0, opacity:1});
       gsap.fromTo(
         ".brace",
         { x: "20", opacity: 0 },
@@ -44,9 +46,7 @@ export default function Hero() {
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 text-white lg:max-w-7xl lg:px-8">
         <div className="flex items-center gap-20">
           <div className="w-3/5 bracecontainer" ref={bracecontainer}>
-            <h1
-              className="text-4xl font-bold leading-16 text-white sm:text-5xl title relative"
-            >
+            <h1 className="text-4xl font-bold leading-16 text-white sm:text-5xl title relative">
               <span>Building</span>
             </h1>
 
@@ -70,7 +70,7 @@ export default function Hero() {
             <div className="mt-10">
               <a
                 href="#"
-                className="rounded-md bg-transparent px-6 border border-white py-3.5 font-semibold text-white shadow-xs hover:bg-white hover:text-[#4CA146] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className=" inline-block rounded-md bg-transparent px-6 border border-white py-3.5 font-semibold text-white shadow-xs hover:bg-white hover:text-[#4CA146] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
               </a>
