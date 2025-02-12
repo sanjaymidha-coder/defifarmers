@@ -26,12 +26,12 @@ export default function Hero() {
       gsap.fromTo(
         ".brace",
         { x: "20", opacity: 0 },
-        { x: "0", ease: "none", duration: 0.2, opacity: 1 }
+        { x: "0", ease: "none", duration: 0.2, opacity: 1, delay:1 }
       );
       gsap.fromTo(
         ".brace-right",
         { x: "-20", opacity: 0 },
-        { x: "0", ease: "none", duration: 0.2, opacity: 1 }
+        { x: "0", ease: "none", duration: 0.2, opacity: 1, delay:1 }
       );
       gsap.fromTo(
         "p",
