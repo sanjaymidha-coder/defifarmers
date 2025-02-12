@@ -44,7 +44,7 @@ export default function Hero() {
   return (
     <div className="bg-[#4CA146] min-h-screen overflow-hidden">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 text-white lg:max-w-7xl lg:px-8">
-        <div className="flex-wrap lg:flex-nowrap flex items-center text-center md:text-left gap-20">
+        <div className="flex-wrap lg:flex-nowrap flex-col-reverse lg:flex-row flex items-center text-center md:text-left gap-20">
           <div className="w-full lg:w-3/5 bracecontainer" ref={bracecontainer}>
             <h1 className="text-4xl font-bold sm:leading-16 leading-12 text-white sm:text-5xl title relative">
               <span>Building</span>
